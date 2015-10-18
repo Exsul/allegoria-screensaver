@@ -1,0 +1,15 @@
+application: allegoria-exsul-net
+version: 1
+runtime: php55
+api_version: 1
+
+default_expiration: "1w"
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /(.*)/?
+  static_files: \1
+  upload: (.*)
